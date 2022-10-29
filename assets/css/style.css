@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+h1 {
+    margin-right: auto;
+}
+
 a {
     text-decoration: none;
     padding-right: 5px;
@@ -17,8 +21,10 @@ a:last-child:after {
     content: "";
 }
 
-h1 {
-    margin-right: auto;
+@media screen and (max-width: 147px) {
+    a::after {
+        content: "";
+    }
 }
 
 .nav-header {
@@ -28,9 +34,19 @@ h1 {
     flex-wrap: wrap;
 }
 
-@media screen and (max-width: 147px) {
-    a::after {
-        content: "";
-    }
+.applications {
+    display: flex;
+}
+
+.about-me {
+    display: flex;
+    justify-content: center;
+}
+
+.tm-photo {
+    border: 4px solid black;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
 }
     
