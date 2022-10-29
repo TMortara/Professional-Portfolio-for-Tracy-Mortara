@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    padding-right: 5px;
+}
+/* ADD HOVER TO LINKS*/
+a::after {
+    content: "|";
+    padding-left: 0.5em;
+
+}
+
+a:last-child:after {
+    content: "";
+}
+
+h1 {
+    margin-right: auto;
+}
+
+.nav-header {
+    display:flex;
+    justify-content:flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 147px) {
+    a::after {
+        content: "";
+    }
+}
+    
