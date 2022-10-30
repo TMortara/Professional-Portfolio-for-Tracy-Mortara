@@ -1,9 +1,17 @@
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
-    margin-right: auto;
+    padding: 5px;
+    margin: 5px;
+    font-size: 40px;
 }
 
 a {
@@ -14,7 +22,6 @@ a {
 a::after {
     content: "|";
     padding-left: 0.5em;
-
 }
 
 a:last-child:after {
@@ -27,13 +34,7 @@ a:last-child:after {
     }
 }
 
-.nav-header {
-    display:flex;
-    justify-content:flex-end;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
+/*Background Imgage*/
 .hero {
     height: 800px;
     width: 100%;
@@ -41,9 +42,51 @@ a:last-child:after {
     background-image: url("../images/IMG_8470\ copy.jpg");
     background-size: cover;
     background-position: center;
+    position: relative;
+}
+
+.navbar {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.navlinks {
+    display:flex;
+    flex-wrap: wrap;
 }
 
 .applications {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.appone, .apptwo, .appthree {
+    border: 5px solid black;
+    flex: 0 0 0;
+    padding: 50px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.appone, .apptwo, .appthree header {
+    font-weight: 500;
+}
+
+.appone img {
+    width: 300px;
+    height: 400px;
+}
+
+.apptwo img {
+    width: 150px;
+    height: 200px;
+}
+
+/*.applications {
     display: flex;
 }
 
@@ -53,9 +96,15 @@ a:last-child:after {
 }
 
 .tm-photo {
-    border: 4px solid black;
-    border-radius: 50%;
-    width: 300px;
-    height: 300px;
-}
-    
+    position: relative;
+    max-width: 100%;
+    height: auto;
+} 
+  
+
+/*img styling from first challenge*
+.benefit-lead img {
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;
+}*/
