@@ -4,8 +4,9 @@
     margin: 0;
 }
 
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #edf5f5;
 }
 
 h1 {
@@ -14,24 +15,42 @@ h1 {
     font-size: 40px;
 }
 
+h2 {
+    font-size: 35px;
+    text-align: center;
+    color: #1e3636;
+}
+
 a {
     text-decoration: none;
     padding-right: 5px;
+    color: white;
 }
 /* ADD HOVER TO LINKS*/
-a::after {
+.nav-tab::after {
     content: "|";
     padding-left: 0.5em;
 }
 
-a:last-child:after {
+.nav-tab:last-child:after {
     content: "";
 }
 
 @media screen and (max-width: 147px) {
-    a::after {
+    .nav-tab::after {
         content: "";
     }
+}
+
+a:hover {
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: navy;
+    background-color: transparent;
+    text-decoration: none;
 }
 
 /*Background Imgage*/
@@ -57,28 +76,31 @@ a:last-child:after {
     flex-wrap: wrap;
 }
 
+.about-me {
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    font-style: italic;
+}
+
 .applications {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     flex: 1;
+    margin: 20px;
+    padding: 20px;
 }
 
 .applications-two {
     display: flex;
     flex-direction: column;
-    /* flex: 0 0 auto; */
-    align-self:stretch;
 }
 
 .appone, .apptwo, .appthree {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     flex: 1;
-}
-
-.header{
-    font-size: 20px;
-    color: navy;
+    background-color: #a0d9d9;
 }
 
 /* .appone, .apptwo, .appthree {
@@ -92,6 +114,8 @@ a:last-child:after {
 
 .appone {
     padding: 20px;
+    background-color: #a0d9d9;
+    text-align: center;
 }
 
 .appone img {
@@ -103,6 +127,31 @@ a:last-child:after {
 .apptwo img {
     width: 150px;
     height: 200px;
+    float: left;
+}
+
+.apptwo, .appthree {
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+.header{
+    font-size: 20px;
+    color: navy;
+}
+
+.contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.contact-links {
+    color: black;
+    font-size: 20px;
 }
 
 footer {
