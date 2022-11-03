@@ -10,9 +10,9 @@ body {
     position: relative;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 600px) {
     body{
-    background-color: grey;}
+    background-color: lightgrey;}
 }
 
 h1 {
@@ -71,7 +71,6 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
 }
 
 .navlinks {
@@ -116,7 +115,6 @@ header {
 }
 /*Horiseon App*/
 .appone {
-    background-color: #a0d9d9;
     text-align: center;
     display: flex;
     align-items: center;
@@ -144,6 +142,16 @@ header {
     flex-direction: column;
     width: 50%;
 }
+
+@media screen and (max-width: 600px){
+    .applications-two {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
 /*Pre-Work Study guide*/
 .apptwo > div {
     display: flex;
@@ -197,6 +205,16 @@ header {
 .contact-links {
     font-size: 20px;
 }
+
+@media screen and (max-width: 600px){
+    .contact-list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
 /*footer*/
 footer {
     text-align: center;
@@ -204,6 +222,9 @@ footer {
     background-color: #519696;
 }
 
-.final-text {
-    align-items: center;
-}
+/* @media screen and (min-width: 600px){
+    footer {
+        background-color: #519696;        
+    }
+} */
+
