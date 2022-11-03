@@ -1,12 +1,18 @@
 * {
     box-sizing: border-box;
-    padding: 0;
     margin: 0;
+    color: #1e3636;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #edf5f5;
+    position: relative;
+}
+
+@media screen and (max-width: 992px) {
+    body{
+    background-color: grey;}
 }
 
 h1 {
@@ -16,30 +22,20 @@ h1 {
 }
 
 h2 {
-    font-size: 35px;
+    font-size: 28px;
     text-align: center;
-    color: #1e3636;
 }
 
+h3 {
+    font-size: 20px;
+    text-decoration: underline;
+    padding: 0.4em;
+
+}
+/*navbar and email link styling*/
 a {
     text-decoration: none;
     padding-right: 5px;
-    color: white;
-}
-/* ADD HOVER TO LINKS*/
-.nav-tab::after {
-    content: "|";
-    padding-left: 0.5em;
-}
-
-.nav-tab:last-child:after {
-    content: "";
-}
-
-@media screen and (max-width: 147px) {
-    .nav-tab::after {
-        content: "";
-    }
 }
 
 a:hover {
@@ -48,34 +44,53 @@ a:hover {
 }
 
 a:visited {
-    color: navy;
+    color: #8bc1c1;
     background-color: transparent;
     text-decoration: none;
 }
 
-/*Background Imgage*/
-.hero {
-    height: 800px;
-    width: 100%;
-    margin-bottom: 25px;
-    background-image: url("../images/IMG_8470\ copy.jpg");
-    background-size: cover;
-    background-position: center;
-    position: relative;
+/*Add pipe to navbar*/
+.nav-tab::after {
+    content: "|";
+    padding-left: 0.5em;
 }
 
-.navbar {
+.nav-tab:last-child:after {
+    content: "";
+}
+/*remove | from navbar when screen too small*/
+@media screen and (max-width: 147px) {
+    .nav-tab::after {
+        content: "";
+    }
+}
+/*navbar styling*/
+header {
     display:flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    flex-direction: column;
-    align-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
 }
 
 .navlinks {
     display:flex;
     flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
+/*Background Imgage*/
+.hero {
+    height: 1000px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("../images/IMG_8470\ copy.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/*About Me Section*/
 .about-me {
     padding: 20px;
     font-size: 20px;
@@ -83,39 +98,29 @@ a:visited {
     font-style: italic;
 }
 
+.about-me > p {
+    width: 60%;
+    margin: 0 auto;
+}
+/*Application section*/
 .applications {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    flex: 1;
     margin: 20px;
-    padding: 20px;
-}
-
-.applications-two {
-    display: flex;
-    flex-direction: column;
 }
 
 .appone, .apptwo, .appthree {
-    /* border: 2px solid black; */
     flex: 1;
     background-color: #a0d9d9;
 }
-
-/* .appone, .apptwo, .appthree {
-    border: 5px solid black;
-    flex: 0 0 0;
-    padding: 20px;
-    text-align: justify;
-    border-style: solid;
-    border-width: 1px;
-} */
-
+/*Horiseon App*/
 .appone {
-    padding: 20px;
     background-color: #a0d9d9;
     text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 20px;
 }
 
 .appone img {
@@ -124,23 +129,63 @@ a:visited {
     height: 400px;
 }
 
+.text-content-one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-content-one > p {
+    width: 80%;
+}
+/*second group of nested applications*/
+.applications-two {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+/*Pre-Work Study guide*/
+.apptwo > div {
+    display: flex;
+}
+
+.text-content-two {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
 .apptwo img {
     width: 150px;
     height: 200px;
     float: left;
 }
 
-.apptwo, .appthree {
-    padding: 20px;
-    margin: 10px;
+.text-content-two > p {
+    width: 80%;
     text-align: center;
 }
 
-.header{
-    font-size: 20px;
-    color: navy;
+.apptwo, .appthree {
+    padding: 20px;
+    margin: 10px;
+}
+/*Coming Soon*/
+.text-content-three {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 9%;
 }
 
+.text-content-three > p {
+    width: 50%;
+    text-align: center;
+}
+/*Contact Info*/
 .contact-list {
     list-style: none;
     display: flex;
@@ -150,35 +195,15 @@ a:visited {
 }
 
 .contact-links {
-    color: black;
     font-size: 20px;
 }
-
+/*footer*/
 footer {
     text-align: center;
     padding: 30px;
-    background-color: #749696;
+    background-color: #519696;
 }
 
-/*.applications {
-    display: flex;
+.final-text {
+    align-items: center;
 }
-
-.about-me {
-    display: flex;
-    justify-content: center;
-}
-
-.tm-photo {
-    position: relative;
-    max-width: 100%;
-    height: auto;
-} 
-  
-
-/*img styling from first challenge*
-.benefit-lead img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}*/
