@@ -2,7 +2,7 @@
 ## Description
 My Professional Portfolio was created to display my work samples to future employers. 
 ## Deployed Portfolio
-
+[Tracy Mortara's Professional Portfolio](https://tmortara.github.io/Professional-Portfolio-for-Tracy-Mortara/)
 ## Navigating my Portfolio
 - The upper navigation bar will take you to the different sections.
 - Clicking on the images in the Applications section will take you to the deployed solutions. 
